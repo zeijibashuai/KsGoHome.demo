@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KS</title>
+    <style>
+        div{
+            margin: 0 auto;
+            width: 280px;
+            height: 160px;
+            border: 10px dashed #b7d1f3;
+            background: url("5684eb39afdb9.jpg");
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        span{
+            font-weight: bold;
+            margin-left: 16px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 32px;
+        }
+        .color{
+            border-color: greenyellow ;
+        }
+
+    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<div class="div">
+    <span>距离凯神回家还有</span>
+    <span id="box"></span>
+</div>
+
+</body>
+</html>
+<script>
+
+
+    (function () {
+        var zz=true;
+        var date=null;
+        var bbq=null;
+        var xhr=new XMLHttpRequest;
+        var box=document.getElementById("box");
+        var box1=document.getElementsByTagName("div")[0];
+
+        xhr.open("HEAD","./qwe.html");
+        xhr.onreadystatechange=function () {
+            if(xhr.readyState===2&&xhr.status===200){
+                date= new Date(xhr.getResponseHeader("date"));
+                console.log(date);
+                qwe();
+                bbq=setInterval(qwe,1000)
+            }
+        };
+        xhr.send();
+
+        function qwe() {
+            date=date.getTime()+1000;
+            date=new Date(date);
+            var mubiaoshijian=new Date("2017-09-28T18:00:00");
+            var time=mubiaoshijian-date;
+            var h= Math.floor(time / (1000 * 60 * 60));
+            var span=time-h*1000*60*60;
+            var f=Math.floor(span/(1000*60));
+            var span1=span-f*1000*60;
+            var s=Math.floor(span1/1000);
+            if(time<=0){
+                box.innerHTML="祝凯神一路平安!"
+                clearInterval(bbq)
+                return
+            }
+            h>9?null:h="0"+h;
+            f>9?null:f="0"+f;
+            s>9?null:s="0"+s;
+            box.innerHTML=`${h}时:${f}分:${s}秒`
+            zzz()
+
+        }
+        function zzz() {
+            if(!zz){
+                box1.classList.add("color");
+                zz=true
+            }else {
+                box1.classList.remove("color")
+                zz=false
+            }
+
+        }
+
+
+
+    })()
+
+
+</script>
