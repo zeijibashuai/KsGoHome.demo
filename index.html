@@ -51,7 +51,7 @@
         xhr.open("HEAD","./qwe.html");
         xhr.onreadystatechange=function () {
             if(xhr.readyState===2&&xhr.status===200){
-                window.date3= new Date(xhr.getResponseHeader("date"));
+                var .date= new Date(xhr.getResponseHeader("date"));
                 qwe();
                 bbq=setInterval(qwe,500)
             }
@@ -59,8 +59,8 @@
         xhr.send();
 
         function qwe() {
-            date1=date3.getTime()+1000;
-            date=new Date(date1);
+            date=date.getTime()+1000;
+            date=new Date(date);
             var mubiaoshijian=new Date("2017/09/28 18:00:00");
             var time=mubiaoshijian-date;
             var h= Math.floor(time / (1000 * 60 * 60));
