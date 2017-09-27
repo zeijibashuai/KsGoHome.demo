@@ -53,7 +53,7 @@
             if(xhr.readyState===2&&xhr.status===200){
                 window.date3= new Date(xhr.getResponseHeader("date"));
                 qwe();
-                bbq=setInterval(qwe,1000)
+                bbq=setInterval(qwe,500)
             }
         };
         xhr.send();
