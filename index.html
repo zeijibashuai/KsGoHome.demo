@@ -53,7 +53,7 @@
             if(xhr.readyState===2&&xhr.status===200){
                 date= new Date(xhr.getResponseHeader("date"));
                 qwe();
-                bbq=setInterval(qwe,500)
+                bbq=setInterval(qwe,1000)
             }
         };
         xhr.send();
@@ -61,7 +61,7 @@
         function qwe() {
             date=date.getTime()+1000;
             date=new Date(date);
-            var mubiaoshijian=new Date("2017/09/28 18:00:00");
+            var mubiaoshijian=new Date("2017/09/28T18:00:00");
             var time=mubiaoshijian-date;
             var h= Math.floor(time / (1000 * 60 * 60));
             var span=time-h*1000*60*60;
