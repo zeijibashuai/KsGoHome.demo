@@ -51,7 +51,7 @@
         xhr.open("HEAD","./qwe.html");
         xhr.onreadystatechange=function () {
             if(xhr.readyState===2&&xhr.status===200){
-                var .date= new Date(xhr.getResponseHeader("date"));
+                var date= new Date(xhr.getResponseHeader("date"));
                 qwe();
                 bbq=setInterval(qwe,500)
             }
