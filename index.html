@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="div">
-    <span>距上班还有</span>
+    <span>距爱笑的你生日还有</span>
     <span id="box"></span>
 </div>
 
@@ -61,7 +61,7 @@
         function qwe() {
             date=date.getTime()+1000;
             date=new Date(date);
-            var mubiaoshijian=new Date("2017/11/28 06:06:00");
+            var mubiaoshijian=new Date("2018/11/13 00:00:00");
             var time=mubiaoshijian-date;
             var h= Math.floor(time / (1000 * 60 * 60));
             var span=time-h*1000*60*60;
@@ -69,7 +69,7 @@
             var span1=span-f*1000*60;
             var s=Math.floor(span1/1000);
             if(time<=0){
-                box.innerHTML="祝凯神一路平安!"
+                box.innerHTML=" S 生日快乐(＾Ｕ＾)ノ~ＹＯ !"
                 clearInterval(bbq)
                 return
             }
