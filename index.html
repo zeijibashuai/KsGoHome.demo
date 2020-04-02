@@ -6,10 +6,10 @@
     <style>
         div{
             margin: 0 auto;
-            width: 280px;
+            width: 400px;
             height: 160px;
             border: 10px dashed #b7d1f3;
-            background: url("./purple.jpg");
+            background: url("./WeChatb4b53f03d1d5643369d9a94b0a155c33.png");
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
         }
@@ -20,9 +20,11 @@
             line-height: 80px;
             text-align: center;
             font-size: 32px;
+            display: block;
+            margin: auto;
         }
         .color{
-            border-color: greenyellow ;
+            border-color: lightpink ;
         }
 
     </style>
@@ -32,7 +34,7 @@
 <body>
 <div class="div">
 <!--     <span>爱笑的你生日还有</span> -->
-    <span>希望你过得好</span>
+    <span>距琦琦的破壳日还有:</span>
     <span id="box"></span>
 </div>
 
@@ -63,7 +65,7 @@
             date=date.getTime()+1000;
             date=new Date(date);
 //             var mubiaoshijian=new Date("2018/11/13 00:00:00");
-            var mubiaoshijian=new Date("2020/1/1 00:00:00");
+            var mubiaoshijian=new Date("2020/4/2 00:00:00");
             var time=mubiaoshijian-date;
             var h= Math.floor(time / (1000 * 60 * 60));
             var span=time-h*1000*60*60;
@@ -71,8 +73,10 @@
             var span1=span-f*1000*60;
             var s=Math.floor(span1/1000);
             if(time<=0){
-//                 box.innerHTML=" S 生日快乐(＾Ｕ＾)ノ~ＹＯ !"
-                 box.innerHTML=" S 很幸福了!"
+                 box.innerHTML="琦琦生日快乐(＾Ｕ＾)ノ~ＹＯ !";
+                 setTimeout(()=> {
+                     window.location.href = 'https://zeijibashuai.github.io/KsGoHome.demo/5637.html'
+                 },2800)
                 clearInterval(bbq)
                 return
             }
