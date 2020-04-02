@@ -32,7 +32,6 @@
 </head>
 <body>
 <div class="div">
-<!--     <span>爱笑的你生日还有</span> -->
     <span>距琦琦的破壳日还有:</span>
     <span id="box"></span>
 </div>
@@ -50,15 +49,16 @@
         var box=document.getElementById("box");
         var box1=document.getElementsByTagName("div")[0];
 
-        xhr.open("HEAD","./qwe.html");
-        xhr.onreadystatechange=function () {
-            if(xhr.readyState===2&&xhr.status===200){
-                date= new Date(xhr.getResponseHeader("date"));
-                qwe();
-                bbq=setInterval(qwe,1000)
-            }
-        };
-        xhr.send();
+        // xhr.open("HEAD","./qwe.html");
+        // xhr.onreadystatechange=function () {
+        //     if(xhr.readyState===2&&xhr.status===200){
+        //     }
+        // };
+        // xhr.send();
+
+        date= new Date();
+        qwe();
+        bbq=setInterval(qwe,1000)
 
         function qwe() {
             date=date.getTime()+1000;
