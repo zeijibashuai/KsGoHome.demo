@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="div">
-    <span>距琦琦的破壳日还有:</span>
+    <span>Happy Time:</span>
     <span id="box"></span>
 </div>
 
@@ -71,7 +71,7 @@
             date=date.getTime()+1000;
             date=new Date(date);
 //             var mubiaoshijian=new Date("2018/11/13 00:00:00");
-            var mubiaoshijian=new Date("2020/4/4 00:00:00");
+            var mubiaoshijian=new Date("2021/4/23 00:00:00");
             var time=mubiaoshijian-date;
             var h= Math.floor(time / (1000 * 60 * 60));
             var span=time-h*1000*60*60;
@@ -79,7 +79,7 @@
             var span1=span-f*1000*60;
             var s=Math.floor(span1/1000);
             if(time<=0){
-                 box.innerHTML="琦琦生日快乐(＾Ｕ＾)ノ~ＹＯ !";
+                 box.innerHTML="Happy birthday(＾Ｕ＾)ノ~ＹＯ !";
                  setTimeout(()=> {
                      window.location.href = 'https://zeijibashuai.github.io/KsGoHome.demo/5637.html'
                  },2800)
